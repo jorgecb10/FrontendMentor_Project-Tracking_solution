@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 60%;
+    @apply bg-LightGrayishBlue;
+    border-bottom-left-radius: 3rem;
+}
+.contenedor {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+.imagen {
+    width: 160%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .imagen {
+        height: 464px;
+    }
+}
+.enlace::after,
+.enlace-login::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    transition: width .2s ease-out;
+}
+.enlace:hover::after,
+.enlace-login:hover::after {
+    width: 100%;
+    height: .1rem;
+}
+.enlace:hover::after {
+    @apply bg-veryDarkBlue;
+}
+.enlace-login:hover::after {
+    @apply bg-GrayishBlue;
+}
+@media (max-width: 640px) {
+    .menu {
+        position: absolute;
+        height: 0;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        top: 5rem;
+        right: 0;
+        padding: 0;
+        z-index: 100;
+        transform: translateX(100%); 
+        transition: 
+            width .5s ease, 
+            transform 0.5s ease, 
+            opacity 0.5s ease, 
+            height 0.3s ease, 
+            padding 0.3s ease;
+    }
+    .mostrar {
+        width: 100%;
+        height: auto;
+        padding: 1rem 2rem;
+        background-color: white;
+        box-shadow: 0px 0px 15px -1px hsl(231, 7%, 65%);
+        border-radius: .2rem;
+        opacity: 1;
+        overflow: visible;
+        transform: translateX(0);
+    }
+}
+.etiqueta-login::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    top: 0;
+    @apply bg-GrayishBlue;
+    opacity: .4;
+}
+@media (min-width: 640px) {
+    .etiqueta-login::before {
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

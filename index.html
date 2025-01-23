@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
+  <title>Frontend Mentor | Project tracking intro component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="text-lg flex flex-col justify-center min-h-[100vh] overflow-x-hidden">
+  <header class="">
+    <nav class="contenedor flex items-center justify-between relative">
+      <img src="src/images/logo.svg" alt="logo">
+
+      <img id="menu-desplegable" src="src/images/icon-hamburger.svg" alt="icon-hamburger" class="block sm:hidden relative">
+
+      <ul class="menu flex flex-col sm:flex-row items-center gap-7 sm:gap-12 uppercase font-barlow-condensed font-bold">
+        <li class="text-veryDarkBlue"><a href="#" class="enlace relative">Product</a></li>
+        <li class="text-veryDarkBlue"><a href="#" class="enlace relative">Features</a></li>
+        <li class="text-veryDarkBlue"><a href="#" class="enlace relative">Pricing</a></li>
+        <li class="etiqueta-login text-GrayishBlue pt-7 sm:pt-0 sm:pl-12 relative w-full text-center"><a href="#" class="enlace-login relative">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mt-16 md:mt-28 z-50">
+    <div class="contenedor flex flex-col-reverse md:flex-row gap-16 md:gap-0 md:items-center lg:gap-24">
+      <div class="md:basis-1/2">
+        <p class="font-barlow-condensed uppercase text-GrayishBlue tracking-[4px] flex items-center">
+          <span class="bg-veryDarkBlue rounded-2xl px-3 tracking-normal mr-4 text-LightGrayishBlue font-semibold">
+              New
+          </span>
+          Monograph Dashboard
+        </p>
+
+        <h1 class="my-5 text-veryDarkBlue uppercase font-barlow-condensed font-bold text-5xl md:text-6xl">Powerful insights into your team</h1>
+
+        <p class="text-DarkGrayishBlue leading-snug font-barlow">
+          Project planning and time tracking for agile teams
+        </p>
+
+        <div class="mt-7 flex items-center justify-between gap-4 font-barlow-condensed lg:gap-0 md:mt-12 lg:w-[70%]">
+          <button class="basis-1/2 bg-red-hsl px-3 py-2 rounded-md font-bold text-LightGrayishBlue uppercase tracking-wider hover:opacity-70 transition-opacity duration-200 ">Schedule a demo</button>
+          <p class="basis-1/2 text-center uppercase tracking-widest text-GrayishBlue">to see a preview</p>
+        </div>
+      </div>
+
+
+      <div class="md:basis-1/2 imagen">
+        <img src="src/images/illustration-devices.svg" alt="illustration-devices" class="md:absolute">
+      </div>
+    </div>
+  </main>
+  
+  <footer class="contenedor">
+    <p class="attribution mt-14 text-center text-veryDarkBlue">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-DarkGrayishBlue font-bold">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/jorgecb10" class="text-DarkGrayishBlue font-bold">Jorge Carranza</a>.
+    </p>
+  </footer>
+
+  <script src="src/js/app.js"></script>
+</body>
+</html>
